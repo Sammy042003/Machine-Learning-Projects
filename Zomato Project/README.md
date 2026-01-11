@@ -1,215 +1,172 @@
-🍽️ Zomato Restaurant Reviews – Sentiment Analysis (ML & NLP Project)
-📌 Project Overview
+# Zomato Restaurant Reviews – Sentiment Analysis (NLP & Machine Learning)
 
-This project focuses on performing sentiment analysis on Zomato restaurant reviews using Natural Language Processing (NLP) and Machine Learning techniques. The goal is to automatically classify customer reviews into positive or negative sentiment, enabling businesses to understand customer opinions and improve decision-making.
+## 📌 Project Overview
+This project focuses on performing **sentiment analysis on Zomato restaurant reviews** using **Natural Language Processing (NLP)** and **Machine Learning** techniques. The goal is to automatically classify customer reviews as **positive or negative**, enabling businesses to understand customer sentiment at scale and make data-driven decisions.
 
-The project follows a complete end-to-end data science pipeline, including data understanding, preprocessing, exploratory data analysis (EDA), feature engineering, visualization, hypothesis testing, and multiple machine learning model implementations.
+The project follows a complete **end-to-end data science pipeline**, covering data understanding, preprocessing, exploratory data analysis, hypothesis testing, feature engineering, model building, evaluation, and explainability.
 
-🎯 Business Objective
+---
 
-Analyze customer feedback at scale
+## 🎯 Business Objective
+Online reviews significantly influence customer decisions and restaurant reputation. Manually analyzing large volumes of reviews is inefficient and not scalable.
 
-Identify patterns in customer sentiment
+This project aims to:
+- Automate sentiment classification of customer reviews
+- Identify patterns in customer satisfaction and dissatisfaction
+- Help restaurants improve service quality using actionable insights
+- Enable scalable customer feedback analytics
 
-Support restaurants in improving service quality
+---
 
-Enable data-driven business decisions using customer reviews
-
-📂 Dataset Description
-
+## 📂 Dataset Description
 The project uses two datasets:
 
-Restaurant Metadata Dataset
+1. **Zomato Restaurant Names and Metadata**
+   - Contains restaurant-related metadata
+
+2. **Zomato Restaurant Reviews**
+   - Restaurant name
+   - Reviewer details
+   - Review text
+   - Rating
+   - Timestamp and metadata
+
+The **review dataset** is primarily used for sentiment analysis.
+
+---
+
+## 🛠️ Tech Stack & Libraries
+- **Programming Language:** Python  
+- **Libraries Used:**
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - nltk
+  - scikit-learn
+  - imbalanced-learn
+
+---
+
+## 🔍 Project Workflow
+
+### 1. Data Understanding
+- Loaded datasets and inspected structure
+- Checked data types, missing values, and duplicates
+- Analyzed basic statistics and data distribution
+
+---
+
+### 2. Data Wrangling
+- Removed duplicate records
+- Handled missing values
+- Ensured correct data types
+- Cleaned inconsistent entries
+
+---
+
+### 3. Exploratory Data Analysis (EDA)
+- Performed **15 meaningful visualizations**
+- Followed **UBM Rule**:
+  - Univariate Analysis
+  - Bivariate Analysis
+  - Multivariate Analysis
+- Extracted business-relevant insights from each chart
+
+---
+
+### 4. Hypothesis Testing
+- Defined **three hypotheses** based on EDA findings
+- Applied appropriate statistical tests
+- Evaluated p-values
+- Drew statistically valid conclusions
+
+---
+
+### 5. Textual Data Preprocessing (NLP)
+Applied comprehensive NLP preprocessing:
+- Contraction expansion
+- Lowercasing
+- Removing punctuation, URLs, digits
+- Stopword removal
+- Tokenization
+- Lemmatization
+- POS tagging
+
+---
+
+### 6. Feature Engineering & Vectorization
+- Created binary sentiment labels from ratings
+- Converted text into numerical features using **TF-IDF Vectorization**
+- Reduced noise and improved model performance
+
+---
+
+### 7. Handling Imbalanced Dataset
+- Checked class distribution
+- Applied balancing techniques where required
+- Ensured unbiased model learning
+
+---
+
+### 8. Machine Learning Models
+Implemented and compared three models:
+1. **Logistic Regression**
+2. **Multinomial Naive Bayes**
+3. **Additional Classification Model**
+
+For each model:
+- Training and prediction
+- Evaluation using Accuracy, Precision, Recall, F1-score
+- Cross-validation and hyperparameter tuning
+- Performance comparison before and after tuning
+
+---
 
-Restaurant name
+### 9. Model Evaluation & Selection
+- Logistic Regression selected as final model
+- Best balance of precision, recall, and F1-score
+- Strong generalization and interpretability
 
-Location and other attributes
+---
 
-Restaurant Reviews Dataset
+### 10. Model Explainability
+- Analyzed feature importance
+- Identified influential words affecting sentiment
+- Improved transparency and business trust
 
-Reviewer name
+---
 
-Review text
+## 📊 Evaluation Metrics Used
+- Accuracy
+- Precision
+- Recall
+- F1-score
 
-Ratings
+These metrics ensure the model minimizes incorrect sentiment classification, especially important for customer satisfaction analysis.
 
-Review time and metadata
+---
 
-🔧 Technologies & Libraries Used
+## ✅ Final Outcome
+- Built a scalable sentiment analysis system
+- Automated customer feedback interpretation
+- Provided actionable insights for business improvement
+- Delivered a production-ready, interpretable ML solution
 
-Programming Language: Python
+---
 
-Data Handling: Pandas, NumPy
+## 🚀 Future Improvements
+- Deploy model using a web application
+- Extend to multi-class sentiment analysis
+- Use deep learning models (LSTM, BERT)
+- Real-time sentiment monitoring dashboard
 
-Visualization: Matplotlib, Seaborn
+---
 
-NLP: NLTK, Regex
+## 👤 Author
+**Smyan**
 
-Feature Extraction: TF-IDF Vectorizer
+---
 
-Machine Learning: Scikit-learn
-
-Model Evaluation: Accuracy, Precision, Recall, F1-score
-
-🧠 Project Workflow
-1️⃣ Know Your Data
-
-Dataset loading
-
-Dataset overview (rows, columns, data types)
-
-Handling missing values and duplicates
-
-2️⃣ Understanding Variables
-
-Column analysis
-
-Statistical summary
-
-Unique value inspection
-
-3️⃣ Data Wrangling
-
-Data cleaning
-
-Handling inconsistent and missing values
-
-Preparing dataset for analysis
-
-4️⃣ Exploratory Data Analysis (EDA)
-
-15 meaningful visualizations following UBM Rule
-
-Univariate analysis
-
-Bivariate analysis
-
-Multivariate analysis
-
-Insights extracted from each chart
-
-Business impact discussion for each visualization
-
-5️⃣ Hypothesis Testing
-
-Three hypotheses were defined and tested using appropriate statistical tests:
-
-Null and alternate hypothesis formulation
-
-P-value computation
-
-Statistical conclusions with business interpretation
-
-🛠️ Feature Engineering & Data Preprocessing
-Textual Data Preprocessing (NLP)
-
-Expanding contractions
-
-Lowercasing
-
-Removing punctuation
-
-Removing URLs and digits
-
-Stopword removal
-
-Tokenization
-
-Lemmatization
-
-POS tagging
-
-Text vectorization using TF-IDF
-
-Feature Manipulation & Selection
-
-Feature reduction to avoid overfitting
-
-Selection of important features
-
-Data Transformation & Scaling
-
-Applied where required for model performance
-
-Handling Imbalanced Dataset
-
-Checked class distribution
-
-Applied balancing techniques when necessary
-
-🤖 Machine Learning Models Implemented
-🔹 Model 1: Logistic Regression
-
-Strong performance on text classification
-
-Balanced precision and recall
-
-Selected as the final prediction model
-
-🔹 Model 2: Multinomial Naive Bayes
-
-Efficient for text-based data
-
-Fast training and inference
-
-Stable performance with minimal tuning
-
-🔹 Model 3: Additional Classification Model
-
-Used for comparison and robustness analysis
-
-Each model includes:
-
-Model training
-
-Prediction
-
-Evaluation metric visualization
-
-Cross-validation and hyperparameter tuning
-
-Business impact analysis
-
-📊 Evaluation Metrics Used
-
-Accuracy
-
-Precision
-
-Recall
-
-F1-Score
-
-These metrics were selected to ensure:
-
-Balanced sentiment detection
-
-Reduced false positives and false negatives
-
-Business-aligned decision-making
-
-🏆 Final Model Selection
-
-Logistic Regression was chosen as the final model due to:
-
-Best overall F1-score
-
-High interpretability
-
-Stable performance on unseen data
-
-Strong alignment with business objectives
-
-📈 Business Impact
-
-Automated sentiment classification
-
-Faster analysis of customer feedback
-
-Identification of service improvement areas
-
-Scalable solution for large datasets
-
-📌 Conclusion
-
-This project delivers a production-ready sentiment analysis pipeline using real-world data. It combines robust NLP preprocessing, insightful visual analysis, and reliable machine learning models to create a scalable and interpretable solution for customer sentiment analytics.
+## 📌 Note
+This project notebook is fully executable end-to-end without errors and follows structured documentation and modular coding standards.
